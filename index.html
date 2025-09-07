@@ -1,8 +1,46 @@
 <!doctype html><html lang="en"><meta charset="utf-8">
 <title>Reshmi Nandy — Portfolio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<body style="font:16px/1.6 system-ui;margin:40px;max-width:900px">
-  <h1>Reshmi Nandy — Enterprise Architect</h1>
-  <p><a href="/posts.html">Essays & Posts</a> • <a href="mailto:me@reshminandy.com">Email</a></p>
-  <p>Site is coming together. See essays list above.</p>
+<style>
+  :root{--bg:#0b0c10;--text:#e6edf3;--muted:#9aa5b1;--card:#0f172a;--link:#b4d3ff;--accent:#6ee7b7;}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial}
+  a{color:var(--link);text-decoration:none}
+  .wrap{max-width:900px;margin:0 auto;padding:32px 20px 56px}
+  .hero h1{font-size:34px;margin:4px 0 8px}
+  .hero p{color:var(--muted);margin:0 0 22px}
+  .cta a{display:inline-block;background:var(--accent);color:#042318;font-weight:700;border-radius:999px;padding:10px 14px}
+  .list{margin-top:26px}
+  .post-card{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .post-card h2{margin:0 0 6px;font-size:22px}
+  .summary{color:var(--muted);margin:0 0 10px}
+  .meta{color:var(--muted);font-size:13px}
+  .tags{margin-top:8px;color:var(--muted);font-size:13px}
+  .tag{display:inline-block;margin-right:6px;padding:2px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:#0a0f1f}
+  .footer{margin-top:36px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+</style>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Reshmi Nandy — Enterprise Architect</h1>
+      <p>Operating models, platform engineering, and India GCC execution.</p>
+      <div class="cta">
+        <a href="mailto:me@reshminandy.com">Email me</a>
+      </div>
+    </section>
+
+    <section class="list" aria-label="Latest posts">
+      {% for post in site.posts %}
+        <article class="post-card">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          {% if post.description or post.summary %}
+            <p class="summary">{{ post.description | default: post.summary }}</p>
+          {% endif %}
+          {% include meta.html date=post.date content=post.content loom_duration=post.loom_duration %}
+          {% if post.tags %}<div class="tags">{% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+        </article>
+      {% endfor %}
+    </section>
+
+    <p class="footer">© Reshmi Nandy — <a href="https://github.com/RESHMINANDY2024">GitHub</a> • <a href="/posts.html">All posts</a></p>
+  </main>
 </body></html>
