@@ -1,0 +1,13 @@
+{% comment %}
+Usage:
+{% include meta.html date=post.date content=post.content loom_duration=post.loom_duration %}
+- Reads per minute: 200 (tweak if you like)
+- Loom length is optional, from front matter: loom_duration: "4:52"
+{% endcomment %}
+
+{% assign words = include.content | strip_html | strip_newlines | replace: '  ',' ' | split: ' ' | size %}
+{% assign minutes = words | plus: 199 | divided_by: 200 %} {# ceil(words/200) #}
+<span class="meta">
+  {{ include.date | date: "%b %d, %Y" }} • {{ minutes }} min read
+  {% if include.loom_duration %} • Loom: {{ include.loom_duration }}{% endif %}
+</span>
