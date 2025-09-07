@@ -1,8 +1,14 @@
+ 
 ---
 layout: post
 title: GCC 2.0 — From Support Center to Global Product Engine in 120 Days
-description: A 40‑40‑40 playbook to move from tickets to outcomes with product funding, paved roads, and DORA/SPACE.
+description: A 40-40-40 playbook to move from tickets to outcomes.
+tags: [GCC, DORA, Platform]
+loom: "https://www.loom.com/embed/YOUR_VIDEO_ID"   # optional
+loom_duration: "4:58"                               # shows on lists/meta
 ---
+
+ 
 
 > **TL;DR:** In 120 days, you can move a GCC from “support factory” to **product engine** by re-wiring **(1) org & governance, (2) platform & paved roads, (3) metrics & rituals**. Track **lead time, deploy frequency, change failure rate, MTTR** weekly; publish ADRs and working agreements; fund by product/value stream, not by project.
 
