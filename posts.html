@@ -5,15 +5,31 @@ title: Essays & Posts
 <!doctype html><html lang="en"><meta charset="utf-8">
 <title>Essays & Posts — Reshmi Nandy</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<body style="font:16px/1.6 system-ui;margin:40px;max-width:900px">
-  <p><a href="/">← Back to portfolio</a></p>
-  <h1>Essays & Posts</h1>
-  <ul>
+<style>
+  body{margin:0;background:#0b0c10;color:#e6edf3;font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial}
+  a{color:#b4d3ff;text-decoration:none}
+  .wrap{max-width:900px;margin:0 auto;padding:30px 20px 56px}
+  .head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .post{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  h2{margin:0 0 6px;font-size:22px}
+  .summary{color:#9aa5b1;margin:0 0 10px}
+  .meta{color:#9aa5b1;font-size:13px}
+</style>
+<body>
+  <main class="wrap">
+    <div class="head">
+      <h1>Essays & Posts</h1>
+      <a href="/">← Back to home</a>
+    </div>
+
     {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <small>— {{ post.date | date: "%b %d, %Y" }}</small>
-      </li>
+      <article class="post">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.description or post.summary %}
+          <p class="summary">{{ post.description | default: post.summary }}</p>
+        {% endif %}
+        {% include meta.html date=post.date content=post.content loom_duration=post.loom_duration %}
+      </article>
     {% endfor %}
-  </ul>
+  </main>
 </body></html>
