@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='980' height='420'>
+  <rect width='100%' height='100%' fill='#0b0c10'/>
+  <text x='20' y='30' fill='#e6edf3' font-family='Inter, Arial' font-size='14'>Platform Capability Heatmap</text>
+  <g transform='translate(60,60)' font-family='Inter, Arial' font-size='12'>
+    <text x='0' y='0' fill='#9aa5b1'>CI</text>
+    <text x='0' y='30' fill='#9aa5b1'>CD</text>
+    <text x='0' y='60' fill='#9aa5b1'>IaC</text>
+    <text x='0' y='90' fill='#9aa5b1'>Runtime</text>
+    <text x='0' y='120' fill='#9aa5b1'>Observability</text>
+    <text x='0' y='150' fill='#9aa5b1'>Portal</text>
+    <g>
+      <rect x='120' y='-10' width='100' height='200' fill='#0f172a' stroke='#334155'/>
+      <rect x='240' y='-10' width='100' height='200' fill='#0f172a' stroke='#334155'/>
+      <rect x='360' y='-10' width='100' height='200' fill='#0f172a' stroke='#334155'/>
+      <rect x='480' y='-10' width='100' height='200' fill='#0f172a' stroke='#334155'/>
+      <text x='170' y='200' fill='#9aa5b1' text-anchor='middle'>Now</text>
+      <text x='290' y='200' fill='#9aa5b1' text-anchor='middle'>+3 mo</text>
+      <text x='410' y='200' fill='#9aa5b1' text-anchor='middle'>+6 mo</text>
+      <text x='530' y='200' fill='#9aa5b1' text-anchor='middle'>+12 mo</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='420'>
+  <rect width='100%' height='100%' fill='#0b0c10'/>
+  <text x='20' y='30' fill='#e6edf3' font-family='Inter, Arial' font-size='14'>Value Stream Map — WIP Hotspots</text>
+  <g transform='translate(40,60)' font-family='Inter, Arial' font-size='12'>
+    <rect x='0' y='30' width='160' height='60' rx='8' fill='#0f172a' stroke='#334155'/>
+    <rect x='200' y='30' width='160' height='60' rx='8' fill='#0f172a' stroke='#334155'/>
+    <rect x='400' y='30' width='160' height='60' rx='8' fill='#0f172a' stroke='#334155'/>
+    <rect x='600' y='30' width='160' height='60' rx='8' fill='#0f172a' stroke='#334155'/>
+    <text x='80' y='65' fill='#e6edf3' text-anchor='middle'>Intake</text>
+    <text x='280' y='65' fill='#e6edf3' text-anchor='middle'>Design/ADR</text>
+    <text x='480' y='65' fill='#e6edf3' text-anchor='middle'>Build</text>
+    <text x='680' y='65' fill='#e6edf3' text-anchor='middle'>Release</text>
+    <circle cx='280' cy='115' r='10' fill='#ef4444'/>
+    <text x='300' y='120' fill='#ef4444'>WIP</text>
+  </g>
+</svg>
