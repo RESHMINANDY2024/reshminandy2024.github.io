@@ -1,9 +1,24 @@
 <!doctype html><html lang="en"><meta charset="utf-8">
 <title>{{ page.title }} — Reshmi Nandy</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<body style="font:16px/1.6 system-ui;margin:40px;max-width:900px">
-  <p><a href="{{ '/posts.html' | relative_url }}">← Back to essays</a></p>
-  <h1>{{ page.title }}</h1>
-  <p><small>{{ page.date | date: "%b %d, %Y" }}</small></p>
-  <article>{{ content }}</article>
+<style>
+  body{margin:0;background:#0b0c10;color:#e6edf3;font:16px/1.65 system-ui}
+  a{color:#b4d3ff;text-decoration:none}
+  .wrap{max-width:900px;margin:0 auto;padding:30px 20px 56px}
+  .meta{color:#9aa5b1;font-size:13px;margin-bottom:12px}
+  hr{border:0;border-top:1px solid rgba(255,255,255,.12);margin:22px 0}
+</style>
+<body>
+  <main class="wrap">
+    <p><a href="{{ '/posts.html' | relative_url }}">← All posts</a></p>
+    <h1>{{ page.title }}</h1>
+    <div class="meta">{% include meta.html date=page.date content=content loom_duration=page.loom_duration %}</div>
+
+    <article class="post-content">
+      {{ content }}
+    </article>
+
+    <hr>
+    <p><a href="/">Back to home</a></p>
+  </main>
 </body></html>
