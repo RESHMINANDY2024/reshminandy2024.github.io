@@ -1,0 +1,17 @@
+---
+layout: none
+title: Essays & Posts
+---
+<!doctype html><html lang="en"><meta charset="utf-8">
+<title>Essays & Posts — Reshmi Nandy</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body style="font:16px/1.6 system-ui;margin:40px;max-width:900px">
+  <p><a href="/">← Back to portfolio</a></p>
+  <h1>Essays & Posts</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>— {{ post.date | date: "%b %d, %Y" }}</small></li>
+    {% endfor %}
+  </ul>
+</body></html>
