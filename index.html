@@ -1,3 +1,7 @@
+---
+layout: none
+title: Home
+---
 <!doctype html><html lang="en"><meta charset="utf-8">
 <title>Reshmi Nandy — Portfolio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -23,9 +27,7 @@
     <section class="hero">
       <h1>Reshmi Nandy — Enterprise Architect</h1>
       <p>Operating models, platform engineering, and India GCC execution.</p>
-      <div class="cta">
-        <a href="mailto:me@reshminandy.com">Email me</a>
-      </div>
+      <div class="cta"><a href="mailto:me@reshminandy.com">Email me</a></div>
     </section>
 
     <section class="list" aria-label="Latest posts">
@@ -36,7 +38,9 @@
             <p class="summary">{{ post.description | default: post.summary }}</p>
           {% endif %}
           {% include meta.html date=post.date content=post.content loom_duration=post.loom_duration %}
-          {% if post.tags %}<div class="tags">{% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+          {% if post.tags %}
+            <div class="tags">{% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+          {% endif %}
         </article>
       {% endfor %}
     </section>
@@ -44,3 +48,4 @@
     <p class="footer">© Reshmi Nandy — <a href="https://github.com/RESHMINANDY2024">GitHub</a> • <a href="/posts.html">All posts</a></p>
   </main>
 </body></html>
+
