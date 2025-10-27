@@ -1,2 +1,5 @@
-
-url: "https://reshminandy.com"
+title: "Reshmi Nandy — Enterprise Architect"
+description: "Operating models, platform engineering, and India GCC execution."
+permalink: /:categories/:year/:month/:day/:title/
+collections: []     # keep default posts
+plugins: []         # keep empty to stay GitHub Pages–safe
