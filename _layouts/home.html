@@ -1,0 +1,40 @@
+---
+---
+<!doctype html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+</head><body class="container">
+  <!-- Banner -->
+  <header class="hero">
+    <div class="avatar"></div>
+    <div>
+      <h1>RESHMI NANDY</h1>
+      <p>Enterprise Architect</p>
+    </div>
+  </header>
+
+  <!-- Contacts -->
+  <section class="contacts">
+    <a class="btn" href="mailto:you@domain">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/reshminandy" target="_blank" rel="noopener">GitHub</a>
+  </section>
+
+  <!-- Featured list: Article 1, 2, 3 with “N minutes read” -->
+  <main class="featured">
+    {% assign featured = site.posts | slice: 0, 3 %}
+    {% for post in featured %}
+      <article class="card">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="muted">{{ post.excerpt | strip_html | strip | truncate: 180 }}</p>
+        <p class="meta">{{ post.content | number_of_words | divided_by:200 | ceil }} min read · {{ post.date | date: "%b %d, %Y" }}</p>
+      </article>
+    {% endfor %}
+  </main>
+
+  <footer class="footer">
+    <a href="{{ '/posts/' | relative_url }}">All posts</a>
+  </footer>
+</body></html>
