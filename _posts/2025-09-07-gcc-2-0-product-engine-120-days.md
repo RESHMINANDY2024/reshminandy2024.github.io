@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: </head><body class="container">
 title: All posts
 permalink: /posts/
 ---
