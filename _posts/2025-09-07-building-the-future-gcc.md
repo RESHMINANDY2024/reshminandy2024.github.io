@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building the Future GCC: Why Global Capability Centers Must Evolve into Intelligence Networks"
+title: "Creating Solution for GCC s"
 loom: ""   # add Loom video ID later if needed
 ---
 
